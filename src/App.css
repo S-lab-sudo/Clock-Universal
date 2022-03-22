@@ -1,38 +1,98 @@
+html,
+body,
+#root,
 .App {
+  height: 100%;
+  background: linear-gradient(to top, #ffa000, #00f3ff);
   text-align: center;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.centeredDiv {
+  display: grid;
+  place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clockHolder {
+  padding: 1em;
+  background: #00000030;
+  border-radius: 1em;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.addTime>button {
+  font-size: 3em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.3em;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #00000040;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #00000080;
+}
+
+.inpclose{
+  position: sticky;
+  top: 1em;
+}
+
+.inpclose>input{
+  position: relative;
+  font-size: 1.3em;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  background: #ffffff40;
+  outline: none;
+  border: none;
+  width: 60%;
+  top: 5%;
+}
+
+.inpclose>button{
+  font-size: 3em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.3em;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #00000040;
+  position: absolute;
+  top:5%;
+  right:5%;
+}
+
+.results{
+  overflow: scroll;
+  margin-top: 2em;
+  height: 90%;
+}
+.lists li{
+  list-style-type: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.lists li:hover{
+  color: #000;
+  background: #ffffff20;
+
 }
